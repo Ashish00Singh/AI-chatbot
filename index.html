@@ -14,28 +14,31 @@
   <script src="script1.js" defer></script>
 </head>
 
-<body>
-  <button class="chatbot-toggler">
+<body class="show-chatbot">
+  <!-- <button class="chatbot-toggler">
     <span class="material-symbols-rounded">mode_comment</span>
     <span class="material-symbols-outlined">close</span>
-  </button>
+  </button> -->
   <div class="chatbot ">
-    <header>
-      <h2>Chatbot</h2>
+    <header  id="hideTheBOdy">
+      <h2 >Chatbot</h2>
       <span class="close-btn material-symbols-outlined">close</span>
     </header>
-    <ul class="chatbox">
-      <li class="chat incoming">
-        <span class="material-symbols-outlined">smart_toy</span>
-        <p>Hi there <br>How can I help you today?</p>
-
-      </li>
-    </ul>
-    <div class="chat-input">
-      <textarea placeholder="Enter a message..." spellcheck="false"></textarea>
-      <span class="material-symbols-outlined">
-        send
-        </span>
+    
+    <div class="hide_show">
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there <br>How can I help you today?</p>
+  
+        </li>
+      </ul>
+      <div class="chat-input hide_show">
+        <textarea placeholder="Enter a message..." spellcheck="false"></textarea>
+        <span class="material-symbols-outlined">
+          send
+          </span>
+      </div>
     </div>
   </div>
 
