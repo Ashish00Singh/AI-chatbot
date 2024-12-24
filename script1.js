@@ -110,3 +110,27 @@ closeBtn.addEventListener("click", () =>
 chatbotToggler.addEventListener("click", () =>
   document.body.classList.toggle("show-chatbot")
 );
+
+// Interview coding test
+
+document.getElementById('hideTheBOdy').addEventListener('click', function () {
+  const elements = document.querySelectorAll('.hide_show');
+  elements.forEach(element => {
+    if (element.classList.contains('collapsed')) {
+      // Expand
+      element.style.height = `${element.scrollHeight}px`; // Set height for smooth transition
+      element.classList.remove('collapsed'); // Remove collapsed class
+      setTimeout(() => {
+        element.style.height = 'auto'; // Reset height to auto after transition
+      }, 500); // Match the CSS transition duration
+    } else {
+      // Collapse
+      element.style.height = `${element.scrollHeight}px`; // Set current height
+      setTimeout(() => {
+        element.style.height = '0'; // Collapse smoothly
+        element.classList.add('collapsed'); // Add collapsed class
+      }, 0);
+    }
+  });
+});
+
