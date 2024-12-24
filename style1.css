@@ -44,7 +44,7 @@ body.show-chatbot .chatbot-toggler span:last-child {
   z-index: 99;
   position: fixed;
   right: 35px;
-  bottom: 90px;
+  bottom: 20px;
   width: 420px;
   background: #fff;
   border-radius: 15px;
@@ -209,10 +209,23 @@ header h2 {
   }
 }
 
+/* Interview coding test */
 
+.hide_show {
+  overflow: hidden;
+  transition: height 0.5s ease, opacity 0.5s ease;
+  height: auto; /* Default expanded state */
+  opacity: 1;
+}
 
+/* Collapsed state */
+.hide_show.collapsed {
+  height: 0; /* Collapse height */
+  opacity: 0; /* Fade out content */
+}
 
-
-.carousel-item  img{
-  height: 600px;
+/* Optional: Ensure child elements also fade smoothly */
+.hide_show > * {
+  transition: opacity 0.5s ease;
+  opacity: 1; /* Default state */
 }
